@@ -59,6 +59,7 @@ Sebaliknya, jika peserta tidak memenuhi kualifikasi kelas kriteria tertentu (mis
 ## 3.2 Desain Graph
 Model graf yang dirancang dalam sistem ini tidak lagi berupa rantai lurus linear tunggal, melainkan beralih menggunakan struktur Multi-Layer Directed Graph
 Berorientasi Cabang (Multi-Path Layered Graph). Model ini memetakan seluruh kemungkinan kombinasi keputusan yang dapat dilalui oleh semua peserta di dalam satu cetak biru arsitektur graf.
+<img width="918" height="457" alt="image" src="https://github.com/user-attachments/assets/a0ced18e-f278-425e-b63d-791f66048fb5" />
 
 Struktur arsitektur graf ini terdiri dari 5 lapisan utama (layers):
   1. Layer Sumber: Diwakili oleh satu node awal tunggal, yaitu Start.
@@ -70,9 +71,12 @@ Setiap node di satu layer terhubung sepenuhnya menuju seluruh node di layer beri
 
 ## 3.3 Flowchart
 Berikut adalah diagram alur (Flowchart) yang menggambarkan logika eksekusi sistem dari pemrosesan data mentah hingga penentuan rekomendasi keputusan akhir:
+<img width="537" height="1005" alt="image" src="https://github.com/user-attachments/assets/46539b6b-081f-4d3d-b21a-2652620871f2" />
 
 ## 3.4 Use Case Diagram
 Use Case Diagram ini menggambarkan interaksi fungsionalitas antara pengguna (user) dengan fungsionalitas di dalam aplikasi DSS. Aktor utama dalam sistem ini adalah Juri / Administrator Lomba.
+<img width="697" height="465" alt="image" src="https://github.com/user-attachments/assets/82847edf-f5c8-440e-83ad-a4c77bbb9c6b" />
+
 ## 3.5 Struktur Node dan Edge
 Untuk menjamin keakuratan proses pencatatan lintasan terpendek, arsitektur data graf dalam sistem dideklarasikan menggunakan susunan pengelompokan komponen Vertices (Node) dan Edges (Sisi) yang kaku dan terstruktur.
 ### A. Komponen Node (Vertices)
