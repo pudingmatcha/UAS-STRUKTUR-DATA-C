@@ -59,6 +59,7 @@ Sebaliknya, jika peserta tidak memenuhi kualifikasi kelas kriteria tertentu (mis
 ## 3.2 Desain Graph
 Model graf yang dirancang dalam sistem ini tidak lagi berupa rantai lurus linear tunggal, melainkan beralih menggunakan struktur Multi-Layer Directed Graph
 Berorientasi Cabang (Multi-Path Layered Graph). Model ini memetakan seluruh kemungkinan kombinasi keputusan yang dapat dilalui oleh semua peserta di dalam satu cetak biru arsitektur graf.
+![Diagram Dijkstra](nama-file.jpg)
 Struktur arsitektur graf ini terdiri dari 5 lapisan utama (layers):
   1. Layer Sumber: Diwakili oleh satu node awal tunggal, yaitu Start.
   2. Layer Kriteria 1 (Public Speaking): Terbagi menjadi 3 node cabang (Public_Excel, Public_Good, Public_Avg).
