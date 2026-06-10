@@ -88,6 +88,20 @@ Sistem memiliki 11 Node Utama yang bertindak sebagai pos-pos persinggahan evalua
   5. Finish: Node target terminal akhir untuk mencatat total biaya perjalanan.
 ### B. Komponen Sisi (Edges) dan Logika Pembobotan
 Hubungan antar-node di dalam sistem diatur menggunakan aturan pembobotan bersyarat (conditional weight assignment) untuk membatasi pergerakan algoritma Dijkstra agar sesuai dengan profil riil peserta:
+| Node Asal (Source) | Node Tujuan (Target) | Aturan Validasi Nilai & Penetapan Bobot (Edge Weight) |
+|-------------------|---------------------|------------------------------------------------------|
+| Start | Public_Excel | Jika nilai Public > 85 → Cost, selain itu → 999.0 |
+| Start | Public_Good | Jika nilai Public 70 < skor < 85 → Cost, selain itu → 999.0 |
+| Start | Public_Avg | Jika nilai Public < 70 → Cost, selain itu → 999.0 |
+| Public_[Cabang] | Kreatif_Excel | Jika nilai Kreativitas > 85 → Cost, selain itu → 999.0 |
+| Public_[Cabang] | Kreatif_Good | Jika nilai Kreativitas 70 < skor < 85 → Cost, selain itu → 999.0 |
+| Public_[Cabang] | Kreatif_Avg | Jika nilai Kreativitas < 70 → Cost, selain itu → 999.0 |
+| Kreatif_[Cabang] | Tampil_Excel | Jika nilai Penampilan > 85 → Cost, selain itu → 999.0 |
+| Kreatif_[Cabang] | Tampil_Good | Jika nilai Penampilan 70 < skor < 85 → Cost, selain itu → 999.0 |
+| Kreatif_[Cabang] | Tampil_Avg | Jika nilai Penampilan < 70 → Cost, selain itu → 999.0 |
+| Tampil_Excel | Finish | 0.0 (Gerbang penutupan kalkulasi lintasan) |
+| Tampil_Good | Finish | 0.0 (Gerbang penutupan kalkulasi lintasan) |
+| Tampil_Avg | Finish | 0.0 (Gerbang penutupan kalkulasi lintasan) |
 
 Keterangan: Variabel Cost pada tabel dihitung menggunakan rumus penalti dasar berbobot: round((100 - Nilai) * (Bobot_Kriteria / 100), 2).
 
