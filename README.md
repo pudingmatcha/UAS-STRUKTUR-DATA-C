@@ -131,6 +131,7 @@ Secara teknis, kode program memanfaatkan komponen slider dari framework Streamli
   3. Bobot Nilai Penampilan (b_penampilan): Mengatur persentase pengaruh estetika dan pembawaan presentasi peserta, dengan nilai standar bawaan sebesar 30%.
 Untuk mengoptimalkan pemanfaatan ruang pada layar monitor, ketiga slider tersebut diletakkan secara berdampingan secara horizontal dengan membagi halaman menjadi tiga kolom menggunakan fungsi st.columns(3).
 Selain menyediakan kontrol input, program ini juga dilengkapi dengan logika validasi otomatis untuk meminimalkan kesalahan manusia (human error) saat menentukan bobot. Berdasarkan aturan matematika keputusan, total akumulasi dari seluruh bobot kriteria harus berjumlah tepat 100% agar perhitungan kalkulasi skor akhir menjadi valid dan adil. Oleh karena itu, di dalam kode program disisipkan fungsi kondisi (if) sebagai pengingat:
+<img width="741" height="161" alt="image" src="https://github.com/user-attachments/assets/132cffce-3013-4289-a084-60053436b3e6" />
 
 Cara kerja dari logika di atas sangat sederhana: setiap kali juri mengubah salah satu nilai slider, sistem akan langsung menjumlahkan ketiga bobot tersebut secara otomatis (real-time). Jika hasil penjumlahannya kurang dari 100% atau lebih dari 100%, sistem akan langsung mendeteksi ketidaksesuaian tersebut dan memunculkan kotak peringatan berwarna kuning di layar menggunakan fungsi st.warning.
 Kotak peringatan ini berfungsi sebagai panduan interaktif bagi juri, yang menginformasikan jumlah bobot saat ini dan mengingatkan mereka untuk menyesuaikan kembali nilai slider hingga total akumulasinya mencapai angka 100%. Fitur validasi ini memastikan bahwa data bobot yang masuk ke tahap perhitungan Algoritma Dijkstra nantinya benar-benar akurat dan sah.
@@ -161,7 +162,12 @@ Bagi peserta yang belum juara, sistem akan otomatis mencari nilai kriteria mana 
 
 ## 4.3 Tampilan Sistem
 Desain antarmuka (User Interface) aplikasi ini dirancang sangat ramah pengguna dengan membaginya ke dalam 4 bagian utama:
-
+| No | Nama Komponen Layar | Deskripsi Fungsi | Elemen Kode Streamlit |
+|----|---------------------|------------------|----------------------|
+| 1 | Menu Input Data | Tempat juri memilih cara memasukkan nama dan nilai peserta (ketik langsung atau unggah file CSV). | `st.radio`, `st.number_input`, `st.file_uploader` |
+| 2 | Geseran Bobot (%) | Tiga buah tombol geser untuk menentukan persentase nilai kriteria sesuai kesepakatan juri. | `st.slider`, `st.columns` |
+| 3 | Tabel Ranking & AI Feedback | Menampilkan tabel urutan pemenang dari atas ke bawah, pengumuman juara 1, serta teks saran perbaikan otomatis. | `st.dataframe`, `st.success`, `st.write` |
+| 4 | Gambar Visualisasi Graf | Menampilkan teks urutan stasiun keputusan yang dilewati beserta visualisasi gambar jaringan graf berwarna hijau-abu. | `st.table`, `st.selectbox`, `st.pyplot` |
 
 Melalui kombinasi antarmuka ini, juri tidak hanya melihat hasil akhir berupa angka mati, tetapi juga bisa melihat visualisasi transparan mengenai bagaimana sistem komputer menghitung dan memutuskan rekomendasi juara secara adil, objektif, dan akurat.
 
