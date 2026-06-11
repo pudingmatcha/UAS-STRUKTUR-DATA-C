@@ -56,8 +56,8 @@ Ikuti langkah-langkah di bawah ini untuk menjalankan aplikasi di komputer/laptop
 Clone Repository
 ```bash
 
-git clone https://github.com/pudingmatcha/UAS-STRUKTUR-DATA.git
-cd UAS-STRUKTUR-DATA
+git clone https://github.com/pudingmatcha/UAS-STRUKTUR-DATA-C.git
+cd UAS-STRUKTUR-DATA-C
 ```
 Buat dan Aktifkan Virtual Environment (Disarankan)
 ```bash
