@@ -53,28 +53,43 @@ Sistem ini memetakan alur penilaian ke dalam 11 node keputusan. Jalur yang tidak
 ## Cara Menjalankan Aplikasi di Lokal (CMD)
 Ikuti langkah-langkah di bawah ini untuk menjalankan aplikasi di komputer/laptop Anda:
 
-### Clone Repository
+Clone Repository
+```bash
+Bash
 
-**Bash**
-git clone [https://github.com/username-kamu/nama-repo-kamu.git](https://github.com/username-kamu/nama-repo-kamu.git)
-cd nama-repo-kamu
+git clone https://github.com/pudingmatcha/UAS-STRUKTUR-DATA.git
+cd UAS-STRUKTUR-DATA
+```
 Buat dan Aktifkan Virtual Environment (Disarankan)
+```bash
+DOS
 
-**DOS**
 python -m venv env
 env\Scripts\activate
+```
 Instal Dependencies (Library)
+```bash
+DOS
 
-**DOS**
 pip install streamlit networkx matplotlib pandas
+```
 Jalankan Aplikasi Streamlit
+```bash
+DOS
 
-**DOS**
 streamlit run app.py
-
->>Catatan untuk Input CSV
+```
+>Catatan untuk Input CSV
 Jika menggunakan metode input berkas, pastikan format judul kolom (header) di file Microsoft Excel/CSV Anda ditulis menggunakan huruf kecil semua seperti contoh berikut:
 **Plaintext**
 nama,public,kreativitas,penampilan
 Peserta_A,85,90,75
 Peserta_B,70,65,80
+
+---
+
+## 📁 Demo / Dokumen
+
+* 📄 [Dokumen Laporan](https://github.com/user-attachments/files/28627180/Dokumen.tanpa.judul.pdf)
+* 📽️ [Demo Project](https://youtu.be/VORSBu2uUpw)
+* 📽️ [Presentasi Project](https://github.com/user-attachments/files/28627245/presentasi_graph_dss.pptx)
