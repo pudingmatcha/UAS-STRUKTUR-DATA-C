@@ -55,29 +55,25 @@ Ikuti langkah-langkah di bawah ini untuk menjalankan aplikasi di komputer/laptop
 
 Clone Repository
 ```bash
-Bash
 
 git clone https://github.com/pudingmatcha/UAS-STRUKTUR-DATA.git
 cd UAS-STRUKTUR-DATA
 ```
 Buat dan Aktifkan Virtual Environment (Disarankan)
 ```bash
-DOS
 
 python -m venv env
 env\Scripts\activate
 ```
 Instal Dependencies (Library)
 ```bash
-DOS
 
 pip install streamlit networkx matplotlib pandas
 ```
 Jalankan Aplikasi Streamlit
 ```bash
-DOS
 
-streamlit run app.py
+streamlit run index.py
 ```
 >Catatan untuk Input CSV
 Jika menggunakan metode input berkas, pastikan format judul kolom (header) di file Microsoft Excel/CSV Anda ditulis menggunakan huruf kecil semua seperti contoh berikut:
