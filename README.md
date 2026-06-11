@@ -86,6 +86,6 @@ Peserta_B,70,65,80
 
 ## 📁 Demo / Dokumen
 
-* 📄 [Dokumen Laporan](https://github.com/user-attachments/files/28627180/Dokumen.tanpa.judul.pdf)
+* 📄 [Dokumen Laporan](https://github.com/pudingmatcha/UAS-STRUKTUR-DATA-C/blob/main/PROJEK%20AKHIR%20STRUKTUR%20DATA.pdf)
 * 📽️ [Demo Project](https://youtu.be/VORSBu2uUpw)
-* 📽️ [Presentasi Project](https://github.com/user-attachments/files/28627245/presentasi_graph_dss.pptx)
+* 📽️ [Presentasi Project](https://canva.link/likrf5li6bw99xg)
